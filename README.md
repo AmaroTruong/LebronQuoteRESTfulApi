@@ -19,14 +19,10 @@ The requirements contain:
 ## API Usage
 The application provides the following endpoints:
 
-GET /quotes: Get a list of all quotes.
-POST /quotes: Add a new quote. The body of the request should be a JSON object with a 'quote' field.
-GET /quotes/<quote_id>: Get a specific quote.
-PUT /quotes/<quote_id>: Update a specific quote. The body of the request should be a JSON object with a 'quote' field.
-DELETE /quotes/<quote_id>: Delete a specific quote.
+1.GET /quotes: Get a list of all quotes.
+2.POST /quotes: Add a new quote. The body of the request should be a JSON object with a 'quote' field.
+3.GET /quotes/<quote_id>: Get a specific quote.
+4.PUT /quotes/<quote_id>: Update a specific quote. The body of the request should be a JSON object with a 'quote' field.
+5.DELETE /quotes/<quote_id>: Delete a specific quote.
 
-1. GET /quotes: Get a list of all quotes.
-\```bash
-2. POST /quotes: Add a new quote. The body of the request should be a JSON object with a 'quote' field.
-\```bash
-3. GET /quotes/<quote_id>: Get a specific quote.
+
