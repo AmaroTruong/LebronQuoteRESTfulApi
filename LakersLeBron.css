@@ -6,7 +6,7 @@ body {
   padding: 5px;
   margin: 0;
   font-size: 16px;
-  background: #552583; /* Dark Purple - reminiscent of the Los Angeles Lakers */
+  background: #552583; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,7 +18,7 @@ h1 {
   text-shadow: -1px 1px 20px #282828;
   font-family: 'Oswald', sans-serif;
   font-size: 90px;
-  color: #FDB927; /* Gold - another color associated with the Lakers */
+  color: #FDB927; 
 }
 
 p {
@@ -27,5 +27,5 @@ p {
   font-family: 'Exo 2', sans-serif;
   font-size: 15px;
   text-shadow: -1px 1px 5px #282828;
-  color: #ffffff; /* Standard white for contrast */
+  color: #ffffff; 
 }
