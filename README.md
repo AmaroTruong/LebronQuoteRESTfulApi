@@ -15,6 +15,9 @@ The requirements contain:
 - `flask`  
 - `flask-restful` 
 
+## Preview
+<img width="1088" alt="Screenshot 2023-07-05 at 2 01 34 AM" src="https://github.com/AmaroTruong/LebronQuoteRestfulApi/assets/137460611/00e521a2-7487-42e0-b4a6-44c51da3a9b0">
+
 
 ## API Usage
 The application provides the following endpoints:
