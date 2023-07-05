@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+body {
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+  font-size: 16px;
+  background: #552583; /* Dark Purple - reminiscent of the Los Angeles Lakers */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: -1px 1px 20px #282828;
+  font-family: 'Oswald', sans-serif;
+  font-size: 90px;
+  color: #FDB927; /* Gold - another color associated with the Lakers */
+}
+
+p {
+  text-align: center;
+  margin: 2rem;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 15px;
+  text-shadow: -1px 1px 5px #282828;
+  color: #ffffff; /* Standard white for contrast */
+}
