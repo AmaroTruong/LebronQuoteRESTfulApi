@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask_restful import Resource, Api, reqparse, abort
+from random import choice
 
 app = Flask(__name__)
 api = Api(app)
@@ -107,9 +108,7 @@ quotes = {
     },
 }
 
-
-
-def abort(quote_id):
+def abort_if_quote_not_found(quote_id):
     if quote_id not in quotes:
         abort(404, message=f"Todo {quote_id} doesn't exist")
 
@@ -122,11 +121,11 @@ def index():
 
 class Quote(Resource):
     def get(self, quote_id):
-        abort(quote_id)
+        abort_if_quote_not_found(quote_id)
         return quotes[quote_id]
 
     def delete(self, quote_id):
-        abort(quote_id)
+        abort_if_quote_not_found(quote_id)
         del quotes[quote_id]
         return "", 204
 
@@ -135,7 +134,7 @@ class Quote(Resource):
         quote = {'quote': args['quote']}
         quotes[quote_id] = quote
         return quote, 201
-    
+
 class QuoteList(Resource):
     def get(self):
         return quotes
@@ -143,12 +142,17 @@ class QuoteList(Resource):
     def post(self):
         args = parser.parse_args()
         quote_id = int(max(quotes.keys()).lstrip('quote')) + 1
-        quote_id = 'quote%i' %quote_id
+        quote_id = 'quote%i' % quote_id
         quotes[quote_id] = {'quote': args['quote']}
         return quotes[quote_id], 201
 
+class RandomQuote(Resource):
+    def get(self):
+        return choice(list(quotes.values()))
+
 api.add_resource(Quote, '/quotes/<quote_id>')
 api.add_resource(QuoteList, '/quotes')
+api.add_resource(RandomQuote, '/randomquote')
 
 if __name__ == "__main__":
     app.run(debug=True)
